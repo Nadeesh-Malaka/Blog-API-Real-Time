@@ -181,7 +181,7 @@ This is a Node.js-based blog API with user management, post management, and real
      npx http-server -p 3000
      ```
 
-  3. Open `http://localhost:3000/test-websocket.html` in your browser.
+  3. Open `http://localhost:3000/Blog-API-Real-Time/test-websocket.html` in your browser.
 
   4. Open the Developer Tools (F12) and check the Console tab or the `<ul id="events">` list.
 
