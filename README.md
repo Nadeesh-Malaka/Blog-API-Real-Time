@@ -28,7 +28,7 @@ This is a Node.js-based blog API with user management, post management, and real
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Nadeesh-Malaka/Blog-API-Real-Time.git
-   cd TASK
+   cd Blog-API-Real-Time
 
 2. **Install Dependencies**:
 
