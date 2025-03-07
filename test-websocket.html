@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebSocket Test</title>
+</head>
+<body>
+  <h1>WebSocket Test</h1>
+  <p>Open the browser console to see WebSocket events, or check the list below.</p>
+  <ul id="events"></ul>
+  <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io('http://localhost:5000');
+    const eventsList = document.getElementById('events');
+
+    socket.on('connect', () => {
+      console.log('Connected to WebSocket server');
+      eventsList.innerHTML += '<li>Connected to WebSocket server</li>';
+    });
+
+    socket.on('postCreated', (post) => {
+      console.log('New post:', post);
+      eventsList.innerHTML += `<li>New post: ${JSON.stringify(post)}</li>`;
+    });
+
+    socket.on('postUpdated', (post) => {
+      console.log('Post updated:', post);
+      eventsList.innerHTML += `<li>Post updated: ${JSON.stringify(post)}</li>`;
+    });
+
+    socket.on('postDeleted', (data) => {
+      console.log('Post deleted:', data);
+      eventsList.innerHTML += `<li>Post deleted: ${JSON.stringify(data)}</li>`;
+    });
+  </script>
+</body>
+</html>
