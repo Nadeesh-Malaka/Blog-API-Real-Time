@@ -1,5 +1,6 @@
 const Joi = require('joi');
 
+// Middleware to validate the request body
 const validate = (schema) => (req, res, next) => {
   const { error } = schema.validate(req.body);
   if (error) {
@@ -8,6 +9,7 @@ const validate = (schema) => (req, res, next) => {
   next();
 };
 
+// Schemas for user and post
 const userSchema = Joi.object({
   username: Joi.string().min(3).required(),
   email: Joi.string().email().required(),
