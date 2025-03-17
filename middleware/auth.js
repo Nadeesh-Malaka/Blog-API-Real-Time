@@ -1,3 +1,5 @@
+//Checks if a user is logged in (has a valid token) before accessing protected routes.
+
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
