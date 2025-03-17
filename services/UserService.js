@@ -1,3 +1,5 @@
+//handles the logic for user actions. It talks to the database and prepares user data
+
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const UserRepository = require('../repositories/UserRepository');

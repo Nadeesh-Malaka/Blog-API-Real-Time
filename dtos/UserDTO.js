@@ -1,3 +1,5 @@
+//Formats user data to send back to the client
+
 class UserDTO {
     constructor(user) {
       this.id = user.id;

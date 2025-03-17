@@ -1,3 +1,5 @@
+//Takes requests, calls UserService, and sends responses.
+
 const UserService = require('../services/UserService');
 
 class AuthController {

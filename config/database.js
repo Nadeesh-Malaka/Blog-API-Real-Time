@@ -1,3 +1,5 @@
+//Sets up the connection to MySQL using Sequelize based on the config.json settings.
+
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
@@ -12,7 +14,7 @@ const sequelize = new Sequelize(
   }
 );
 
-sequelize.authenticate()
+sequelize.authenticate()  //checks if the database connection is successful
   .then(() => console.log('Database connected'))
   .catch(err => console.error('Database connection failed:', err));
 

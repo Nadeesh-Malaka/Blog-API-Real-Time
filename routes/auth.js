@@ -1,3 +1,5 @@
+// Catches the request and sends it to AuthController
+
 const express = require('express');
 const AuthController = require('../controllers/AuthController');
 const router = express.Router();

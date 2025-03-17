@@ -1,3 +1,5 @@
+// Interacting with the database using Sequelize to save or find users
+
 const User = require('../models/User');
 
 class UserRepository {
